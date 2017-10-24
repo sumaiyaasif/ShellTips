@@ -1,0 +1,57 @@
+Navigating Directory 
+	Command | Purpose 
+	ls	list files in current directory
+	ls -al	list all files in current dir, including dot files
+	ls -al | grep string	show file name matching string
+	cd dirpath	change directory
+	cd	go to $HOME dir
+	cd ..	go up one dir
+	pwd	show the current dir
+
+
+
+
+File/Directory Manipulation
+	touch filename	create a new file, or update timestamp of the file if it exists already.
+	rm filename	delete a file
+	rm -r dirname	delete a directory. (careful!)
+	cp filename new_filename	copy a file
+	cp -r dirname new_name	copy a dir
+	mkdir new_dir_name	create a new dir
+	rmdir dirname	delete a dir only if it is empty
+	mv filename new_name	rename file, or move to a diff dir.
+	du -sh dirname	show dir size
+
+
+
+Viewing Files
+	cat fname	display file content
+	cat fname | more	view a file by page. Type 【q】 to exit. Type 【h】 for other keys.
+	vi fname	view a file. Type 【Escape : q】 to exit. [see vim Basics]
+	head fname	view the first few lines of a file. (most useful for big files, e.g. log file.)
+	tail fname	view the last few lines of a file.
+	tail -f fname	view the last few lines of a growing file, updated continuously. Typically used on log files.
+	file fname	report what type of file it is. (For example, text, jpg, png, pdf, ….)
+
+
+
+Locating Commands
+	type cmd	show if cmd is a shell built-in or standalone program. For example, type kill. The command type is a built-in bash command, not a standalone shell util. Try type type
+	which cmd	show full path of a command, useful for checking if a program is installed (if it's in the search path in $PATH environment variable.)
+	man cmd	view documentation of a command. 【q】 to exit. 【h】 for help.
+	apropos string	search man pages.
+	locate fname	find a file by name (using the database see man updatedb). This is similar to find dir_paths -name "*fname*" but much faster.
+	updatedb	update the database used by locate. (this is done automatically. Useful only if you just installed bunch of new commands.)
+
+
+Install Program/Package
+	following commands are for Ubuntu Linux
+	apt-cache search name	find package name for install by “apt-get”
+	apt-cache show name	describe package name
+	apt-get install name	install a new program. (usually used with sudo in front)
+	apt-get remove name	remove (un-install) a program.
+	apt-get purge name	remove a program and its config files.
+	dpkg -l	list all installed packages
+	apt-get update	sync package index files from sources. (need to do this regularly)
+	apt-get upgrade	upgrade all installed packages to latest versions (if any).
+	apt-get dist-upgrade	update OS kernel, and others.
