@@ -1,0 +1,41 @@
+Command Mode (Press Esc to enter Command Mode)
+	ctrl-r = to redo 
+	A = to append text at the end
+	:wq = to save and exit (write and quit)
+	:q! = to trash all changes
+	dw = move the cursor to the beginning of the word to delete that word
+	2w = to move the cursor two words forward
+	3e = to move the cursor to the end of the third word forward
+	0(zero) = to move to the start of the line
+	:s/old/new/g to substitute 'new' for 'old' where g is globally
+	/ backward search n to find the next occurrence and N to search in opposite direction
+	? forward search
+	:! to run the shell commands like :!dir, :!ls (dir and ls)
+	:w = TEST (where TEST is the filename you chose.) . Save the file
+
+
+format for change command is: operator [number]motion
+	operator = is what to do, such as 'd' for delete
+	[number] = is an optional count to repeat the motion
+	motion = moves over the text to operate on, such as 'w' (word)
+
+
+Insert Mode (Press i to enter insert Mode)
+
+	p = puts the previously deleted text after the cursor(Type dd to delete the line and store it in a Vim register. and p to put the line)
+	r = to replace the letter e.g press re to replace the letter with e
+	ce = to change until the end of a word (place the cursor on the u in lubw it will delete ubw )
+	ce = deletes the word and places you in Insert mode
+	G = to move you to the bottom of the file.
+	gg = to move you to the start of the file.
+		Type the number of the line you were on and then G
+	x = to delete unwanted character
+	u = to undo the last the command and U to undo the whole line
+	
+
+
+Moving Around File 
+		k 
+	h		l
+		j 
+
